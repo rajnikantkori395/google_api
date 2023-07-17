@@ -7,11 +7,6 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-// app.use("/", (req, res) => {
-//   res.json({
-//     message: "Hello from express server APP",
-//   });
-// });
 app.use("/sheets", sheetsRouter);
 // Handle all other routes
 app.use((req, res) => {
