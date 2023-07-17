@@ -12,7 +12,7 @@ app.use(cors());
 //     message: "Hello from express server APP",
 //   });
 // });
-app.use("/api/sheets", sheetsRouter);
+app.use("/sheets", sheetsRouter);
 // Handle all other routes
 app.use((req, res) => {
   res.status(404).json({ error: "Route not found" });
