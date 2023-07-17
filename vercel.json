@@ -8,8 +8,12 @@
   ],
   "routes": [
     {
+      "src": "/sheets/:spreadsheetId/:range?",
+      "dest": "./controllers/sheetsController.js"
+    },
+    {
       "src": "/sheets/([^/]+)/([^/]+)?",
-      "dest": "index.js"
+      "dest": "./index.js"
     },
     {
       "src": "/(.*)",
