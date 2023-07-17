@@ -16,6 +16,7 @@ const drive = google.drive({ version: 'v3', auth });
 const driveController = {
   uploadFile: async (req, res) => {
     try {
+        console.log("inside upload try");
       const { filePath, mimeType, folderId } = req.body;
 
       const fileMetadata = {
@@ -33,7 +34,7 @@ const driveController = {
         media,
       });
 
-      res.json(response.data);
+      res.status(200).json(response.data);
     } catch (error) {
       console.error('Error uploading file:', error);
       res.status(500).json({ error: 'Error uploading file' });
