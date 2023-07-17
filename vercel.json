@@ -8,6 +8,10 @@
   ],
   "routes": [
     {
+      "src": "/sheets/([^/]+)/([^/]+)?",
+      "dest": "index.js"
+    },
+    {
       "src": "/(.*)",
       "dest": "/"
     }
