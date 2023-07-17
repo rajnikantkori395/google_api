@@ -12,7 +12,7 @@ app.use("/", (req, res) => {
     message: "Hello from express server APP",
   });
 });
-app.use("/sheets", sheetsRouter);
+app.use("api/sheets", sheetsRouter);
 
 const PORT = process.env.PORT || 9000;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
